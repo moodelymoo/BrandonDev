@@ -21,7 +21,8 @@ def testFizzBuzzOutput():
         # ####
         output2 = out2.getvalue().strip()
 
-        assert output == output2
+        assert output == output2, "did not match expected FizzBuzz pattern," \
+                                  "\nExpected:\n" + output.__str__() + "\nReceived:\n" + output2.__str__()
     finally:
         sys.stdout = saved_stdout
 
